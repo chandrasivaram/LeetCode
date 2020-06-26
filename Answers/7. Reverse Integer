@@ -1,0 +1,16 @@
+public class ReverseInteger {
+	
+	public int reverseInt(int x) {
+		
+		StringBuilder result = new StringBuilder();
+		
+		result = x < 0 ? new StringBuilder(String.valueOf(-x)+"-").reverse()
+                : new StringBuilder(String.valueOf(x)).reverse();
+		try {
+		return Integer.parseInt(result.toString());
+		} catch (Exception e) {
+            return 0;
+        }
+		
+	}
+}
